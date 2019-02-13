@@ -221,6 +221,10 @@ header.masthead h2 {
     margin-bottom: -15px;
 }
 
+.blue {
+    background-color: #1a252f;
+}
+
 .portfolio .portfolio-item {
     position: relative;
     display: block;
