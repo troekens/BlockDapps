@@ -18,6 +18,11 @@ h6 {
     font-family: 'Montserrat';
 }
 
+pre {
+    white-space:pre-wrap;
+    font-family: 'Lato';
+}
+
 hr.star-light,
 hr.star-dark {
     max-width: 15rem;

@@ -45,7 +45,7 @@ class PostItem extends Component {
                         <p className="text-center">{post.name}</p>
                     </div>
                     <div className="col-md-10">
-                        <p className="lead">{post.text}</p>
+                        <pre className="lead">{post.text}</pre>
                         {showActions ? (
                             <span>
                 <button
