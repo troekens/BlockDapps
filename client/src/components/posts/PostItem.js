@@ -47,39 +47,39 @@ class PostItem extends Component {
                     <div className="col-md-10">
                         <pre className="lead">{post.text}</pre>
                         {showActions ? (
-                            <span>
-                <button
-                    onClick={this.onLikeClick.bind(this, post._id)}
-                    type="button"
-                    className="btn btn-light mr-1"
-                >
-                  <i
-                      className={classnames('fas fa-thumbs-up', {
-                          'text-info': this.findUserLike(post.likes)
-                      })}
-                  />
-                  <span className="badge badge-light">{post.likes.length}</span>
-                </button>
-                <button
-                    onClick={this.onUnlikeClick.bind(this, post._id)}
-                    type="button"
-                    className="btn btn-light mr-1"
-                >
-                  <i className="text-secondary fas fa-thumbs-down"/>
-                </button>
-                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
-                  Comments
-                </Link>
-                                {post.user === auth.user.id ? (
-                                    <button
-                                        onClick={this.onDeleteClick.bind(this, post._id)}
-                                        type="button"
-                                        className="btn btn-danger mr-1"
-                                    >
-                                        <i className="fas fa-times"/>
-                                    </button>
-                                ) : null}
-              </span>
+                                    <span className="align-bottom">
+                                            <button
+                                                onClick={this.onLikeClick.bind(this, post._id)}
+                                                type="button"
+                                                className="btn btn-light mr-1"
+                                            >
+                                              <i
+                                                  className={classnames('fas fa-thumbs-up', {
+                                                      'text-info': this.findUserLike(post.likes)
+                                                  })}
+                                              />
+                                            <span className="badge badge-light">{post.likes.length}</span>
+                                            </button>
+                                            <button
+                                                onClick={this.onUnlikeClick.bind(this, post._id)}
+                                                type="button"
+                                                className="btn btn-light mr-1"
+                                            >
+                                          <i className="text-secondary fas fa-thumbs-down"/>
+                                            </button>
+                                            <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+                                              Comments
+                                            </Link>
+                                            {post.user === auth.user.id ? (
+                                                <button
+                                                    onClick={this.onDeleteClick.bind(this, post._id)}
+                                                    type="button"
+                                                    className="btn btn-danger mr-1"
+                                                >
+                                                    <i className="fas fa-trash" />
+                                                </button>
+                                            ) : null}
+                                    </span>
                         ) : null}
                     </div>
                 </div>
