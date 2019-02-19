@@ -66,9 +66,9 @@ class Navbar extends Component {
                     <Link className="navbar-brand" to="/">
                         BlockDapps
                     </Link>
-                    <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
-                        <i class="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -76,6 +76,10 @@ class Navbar extends Component {
                             <li className="nav-item">
                                 <Link className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                                       to="/profiles">Developers</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                      to="/articles">Articles</Link>
                             </li>
                         </ul>
                         {isAuthenticated ? authLinks : guestLinks}
