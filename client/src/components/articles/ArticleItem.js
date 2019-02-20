@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import classnames from 'classnames';
 import {Link} from 'react-router-dom';
 import {deleteArticle, addLike, removeLike} from '../../actions/articleActions';
+import renderHTML from 'react-render-html';
 
 class ArticleItem extends Component {
     onDeleteClick(id) {
@@ -46,7 +47,7 @@ class ArticleItem extends Component {
                     </div>
                     <div className="col-md-10">
                         <pre className="lead"><h3 className="text-secondary mb-0">{article.title}</h3></pre>
-                        <pre className="lead">{article.text}</pre>
+                        <pre className="lead">{renderHTML(article.text)}</pre>
                         {showActions ? (
                             <span className="align-bottom">
                                             <button
@@ -69,7 +70,7 @@ class ArticleItem extends Component {
                                           <i className="text-secondary fas fa-thumbs-down"/>
                                             </button>
                                             <Link to={`/articles/${article._id}`} className="btn btn-info mr-1">
-                                              Comments ({article.comments.length})
+                                              read more
                                             </Link>
                                 {article.user === auth.user.id ? (
                                     <button

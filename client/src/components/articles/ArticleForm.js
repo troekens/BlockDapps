@@ -4,6 +4,9 @@ import {connect} from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import TextFieldGroup from '../common/TextFieldGroup';
 import {addArticle} from '../../actions/articleActions';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 
 class ArticleForm extends Component {
     constructor(props) {
@@ -42,7 +45,8 @@ class ArticleForm extends Component {
     }
 
     onChange(e) {
-        this.setState({[e.target.name]: e.target.value});
+        //this.setState({[e.target.name]: e.target.value});
+        this.setState({text:e});
     }
 
     render() {
@@ -64,12 +68,16 @@ class ArticleForm extends Component {
                                         placeholder="Title..."
                                         name="title"
                                         value={this.state.title}
-                                        onChange={this.onChange}
+                                        onChange={e => {
+                                            this.setState({title:e.target.value})}
+                                        }
                                         error={errors.title}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <TextAreaFieldGroup
+                                    <ReactQuill
+                                        modules={ArticleForm.modules}
+                                        formats={ArticleForm.formats}
                                         placeholder="Create an article"
                                         name="text"
                                         value={this.state.text}
@@ -87,6 +95,22 @@ class ArticleForm extends Component {
                 </div>
 
             );}
+
+        ArticleForm.modules = {
+            toolbar: [
+                [{header:'1'},{header:'2'},{font:[]}],
+                [{size:[]}],
+                ['bold', 'italic','underline','strike','blockquote'],
+                [{'list':'ordered'},{'list':'bullet'}],
+                ['link','image','video'],
+                ['clean'],
+                ['code-block']
+            ]
+            };
+
+        ArticleForm.formats = [
+            'hearder','font','size','bold','italic','underline','strike','blockquote','list','bullet','link','image','video','code-block'
+        ]
 
             if(displayFormArticle) {
             isActive = (<button
