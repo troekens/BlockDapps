@@ -45,6 +45,7 @@ class ArticleItem extends Component {
                         <p className="text-center">{article.name}</p>
                     </div>
                     <div className="col-md-10">
+                        <pre className="lead"><h3 className="text-secondary mb-0">{article.title}</h3></pre>
                         <pre className="lead">{article.text}</pre>
                         {showActions ? (
                             <span className="align-bottom">

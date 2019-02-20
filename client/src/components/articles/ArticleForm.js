@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import TextFieldGroup from '../common/TextFieldGroup';
 import {addArticle} from '../../actions/articleActions';
 
 class ArticleForm extends Component {
@@ -9,6 +10,7 @@ class ArticleForm extends Component {
         super(props);
         this.state = {
             text: '',
+            title:'',
             errors: {},
             displayFormArticle: false,
         };
@@ -30,12 +32,13 @@ class ArticleForm extends Component {
 
         const newArticle = {
             text: this.state.text,
+            title: this.state.title,
             name: user.name,
             avatar: user.avatar
         };
 
         this.props.addArticle(newArticle);
-        this.setState({text: ''});
+        this.setState({text: '', title: ''});
     }
 
     onChange(e) {
@@ -46,15 +49,24 @@ class ArticleForm extends Component {
         const {errors, displayFormArticle} = this.state;
 
         let articleForm;
+        let isActive;
+        let isNotActive;
 
         if (displayFormArticle) {
             articleForm = (<div className="post-form mb-3">
-                    <h2 className="text-center text-uppercase text-secondary mb-0">Articles Feed</h2>
-                    <hr className="star-dark mb-5"/>
                     <div className="card card-info">
                         <div className="card-header bg-primary text-white">Start an article...</div>
                         <div className="card-body">
                             <form onSubmit={this.onSubmit}>
+                                <div className="form-group">
+                                    <TextFieldGroup
+                                        placeholder="Title..."
+                                        name="title"
+                                        value={this.state.title}
+                                        onChange={this.onChange}
+                                        error={errors.title}
+                                    />
+                                </div>
                                 <div className="form-group">
                                     <TextAreaFieldGroup
                                         placeholder="Create an article"
@@ -75,10 +87,22 @@ class ArticleForm extends Component {
 
             );}
 
-        return (
-            <div className="post-form mb-3">
-                {articleForm}
-                <button
+            if(displayFormArticle) {
+            isActive = (<button
+                    type="button"
+                    onClick={() => {
+                        this.setState(prevState => ({
+                            displayFormArticle: !prevState.displayFormArticle
+                        }));
+                    }}
+                    className="btn btn-light"
+                >
+                    Close the form
+                </button>
+            );}
+
+        if(!displayFormArticle) {
+            isNotActive = (<button
                     type="button"
                     onClick={() => {
                         this.setState(prevState => ({
@@ -89,7 +113,15 @@ class ArticleForm extends Component {
                 >
                     Write an article
                 </button>
+            );}
 
+        return (
+            <div className="post-form mb-3">
+                <h2 className="text-center text-uppercase text-secondary mb-0">Articles Feed</h2>
+                <hr className="star-dark mb-5"/>
+                {articleForm}
+                {isActive}
+                {isNotActive}
             </div>
 
         );
