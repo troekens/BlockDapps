@@ -70,6 +70,12 @@ hr.star-dark:after {
     margin-top: 0rem;
 }
 
+.ql-editor {
+    overflow-y: scroll;
+    resize: vertical;
+    min-height: 20em;
+}
+
 img.small {
     width: 100%;
 }
