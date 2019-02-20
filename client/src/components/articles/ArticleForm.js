@@ -47,6 +47,7 @@ class ArticleForm extends Component {
 
     render() {
         const {errors, displayFormArticle} = this.state;
+        const {isAuthenticated, user} = this.props.auth;
 
         let articleForm;
         let isActive;
@@ -95,7 +96,7 @@ class ArticleForm extends Component {
                             displayFormArticle: !prevState.displayFormArticle
                         }));
                     }}
-                    className="btn btn-light"
+                    className="btn btn-primary"
                 >
                     Close the form
                 </button>
@@ -109,7 +110,7 @@ class ArticleForm extends Component {
                             displayFormArticle: !prevState.displayFormArticle
                         }));
                     }}
-                    className="btn btn-light"
+                    className="btn btn-primary"
                 >
                     Write an article
                 </button>
@@ -119,9 +120,10 @@ class ArticleForm extends Component {
             <div className="post-form mb-3">
                 <h2 className="text-center text-uppercase text-secondary mb-0">Articles Feed</h2>
                 <hr className="star-dark mb-5"/>
-                {articleForm}
-                {isActive}
-                {isNotActive}
+                {isAuthenticated ? isNotActive: null}
+                {isAuthenticated ? articleForm : null}
+                {isAuthenticated ? isActive: null}
+
             </div>
 
         );
