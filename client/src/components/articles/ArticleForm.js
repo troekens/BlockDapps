@@ -98,7 +98,7 @@ class ArticleForm extends Component {
 
         ArticleForm.modules = {
             toolbar: [
-                [{header:'1'},{header:'2'},{font:[]}],
+                [{'header':'1'},{'header':'2'},{font:[]}],
                 [{size:[]}],
                 ['bold', 'italic','underline','strike','blockquote'],
                 [{'list':'ordered'},{'list':'bullet'}],
@@ -109,7 +109,7 @@ class ArticleForm extends Component {
             };
 
         ArticleForm.formats = [
-            'hearder','font','size','bold','italic','underline','strike','blockquote','list','bullet','link','image','video','code-block'
+            'header','font','size','bold','italic','underline','strike','blockquote','list','bullet','link','image','video','code-block'
         ]
 
             if(displayFormArticle) {

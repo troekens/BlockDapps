@@ -4,7 +4,6 @@
     <list default="true" id="0c133ccd-0d6a-4176-b884-ab11575b3de4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/client/src/components/articles/ArticleForm.js" afterPath="$PROJECT_DIR$/client/src/components/articles/ArticleForm.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/articles/ArticleItem.js" afterPath="$PROJECT_DIR$/client/src/components/articles/ArticleItem.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +20,7 @@
       <file leaf-file-name="Article.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/article/Article.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="498">
               <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -40,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArticleForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="100" column="41" lean-forward="false" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -88,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleItem.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleItem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="-578">
               <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -220,8 +219,8 @@
         <option value="$PROJECT_DIR$/client/src/components/article/Article.js" />
         <option value="$PROJECT_DIR$/client/src/components/article/CommentFeed.js" />
         <option value="$PROJECT_DIR$/client/src/components/article/CommentItem.js" />
-        <option value="$PROJECT_DIR$/client/src/components/articles/ArticleForm.js" />
         <option value="$PROJECT_DIR$/client/src/components/articles/ArticleItem.js" />
+        <option value="$PROJECT_DIR$/client/src/components/articles/ArticleForm.js" />
       </list>
     </option>
   </component>
@@ -400,7 +399,7 @@
       <updated>1549294128022</updated>
       <workItem from="1549294129572" duration="5671000" />
       <workItem from="1549960600238" duration="14668000" />
-      <workItem from="1550067901572" duration="49017000" />
+      <workItem from="1550067901572" duration="49181000" />
     </task>
     <task id="LOCAL-00001" summary="color changes">
       <created>1550069045268</created>
@@ -458,11 +457,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550672314032</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rich text editor added">
+      <created>1550678319523</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550678319523</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69356000" />
+    <option name="totallyTimeSpent" value="69520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -502,7 +508,8 @@
     <MESSAGE value="Article front-end beginning" />
     <MESSAGE value="Article title added" />
     <MESSAGE value="Article comment working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Article comment working" />
+    <MESSAGE value="Rich text editor added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rich text editor added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -887,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/article/Article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/article/CommentForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -925,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleFeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/articles/Articles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -943,20 +932,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleForm.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="-578">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleItem.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleFeed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/article/Article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/articles/ArticleForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="100" column="41" lean-forward="false" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
