@@ -68,7 +68,7 @@ class ArticleItem extends Component {
                                             >
                                           <i className="text-secondary fas fa-thumbs-down"/>
                                             </button>
-                                            <Link to={`/article/${article._id}`} className="btn btn-info mr-1">
+                                            <Link to={`/articles/${article._id}`} className="btn btn-info mr-1">
                                               Comments ({article.comments.length})
                                             </Link>
                                 {article.user === auth.user.id ? (

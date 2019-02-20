@@ -25,6 +25,7 @@ import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Articles from './components/articles/Articles';
 import Post from './components/post/Post';
+import Article from './components/article/Article';
 import NotFound from './components/not-found/NotFound';
 
 import './App.css';
@@ -100,6 +101,9 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/post/:id" component={Post} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/articles/:id" component={Article} />
               </Switch>
               <Route exact path="/not-found" component={NotFound} />
             </div>
