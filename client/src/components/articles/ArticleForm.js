@@ -109,8 +109,21 @@ class ArticleForm extends Component {
             };
 
         ArticleForm.formats = [
-            'header','font','size','bold','italic','underline','strike','blockquote','list','bullet','link','image','video','code-block'
-        ]
+            'header',
+            'font',
+            'size',
+            'bold',
+            'italic',
+            'underline',
+            'strike',
+            'blockquote',
+            'list',
+            'bullet',
+            'link',
+            'image',
+            'video',
+            'code-block'
+        ];
 
             if(displayFormArticle) {
             isActive = (<button
