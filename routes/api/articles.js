@@ -9,7 +9,7 @@ const Article = require('../../models/Article');
 const Profile = require('../../models/Profile');
 
 // Validation
-const validateArticleInput = require('../../validation/post');
+const validateArticleInput = require('../../validation/article');
 
 // @route   GET api/articles
 // @desc    Get articles
